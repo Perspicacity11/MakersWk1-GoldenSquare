@@ -2,13 +2,12 @@ require 'gratitudes'
 
 RSpec.describe Gratitudes do
     it "initialises an empty array" do
-        good_things = Gratitudes.new
-        expect(good_things.format).to eq "Be grateful for: "
+        expect(Gratitudes.new.format).to eq "Be grateful for: "
     end
 
     it "returns string with one good thing" do
         good_things = Gratitudes.new
-        string = good_things.add("dogs")
+        good_things.add("dogs")
         expect(good_things.format).to eq "Be grateful for: dogs"
     end
 

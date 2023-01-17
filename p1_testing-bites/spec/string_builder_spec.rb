@@ -7,14 +7,20 @@ RSpec.describe StringBuilder do
     expect(string.output).to eq ""
   end
 
-  it "Receives a string and returns the length of the string" do
-    string = StringBuilder.new.add('')
+  it "Instantiates the object as an emptuy string and returns the length of the string" do
+    string = StringBuilder.new
     expect(string.size).to eq 0
   end
 
   it "Receives a string and returns the length of the string" do
     string = StringBuilder.new.add('frog')
     expect(string.size).to eq 4
+  end
+
+  it "Recieves a string and returns the string" do
+    string = StringBuilder.new
+    string.add('cart')
+    expect(string.output).to eq "cart"
   end
 
   it "Initialize a string, add 2 times, and return the StringBuilder object" do
