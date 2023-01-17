@@ -7,7 +7,7 @@ RSpec.describe Present do
         expect(gift.unwrap).to eq "books"
     end
 
-    context "when contents have been wrapped" do
+    context "when contents have already been wrapped" do
         it "fails" do
             gift = Present.new
             gift.wrap("books")
