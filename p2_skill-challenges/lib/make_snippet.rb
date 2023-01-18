@@ -4,4 +4,3 @@ def make_snippet(string)
     cut_string = output[0, 5]
     return cut_string.join(" ") + "..."
 end
-
