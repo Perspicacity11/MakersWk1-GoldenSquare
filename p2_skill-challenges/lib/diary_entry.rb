@@ -1,8 +1,8 @@
-class DiarySection
-    def initialize(title, contents) 
+class DiaryEntry
+    def initialize(title, contents)
       @title = title
       @contents = contents
-      @wordcount = contents.split(" ").count
+      @word_count = 0
       @call_count = 0
     end
   
@@ -15,16 +15,18 @@ class DiarySection
     end
   
     def count_words
-      @wordcount
+      @word_count = @contents.split.length
+      return @word_count
     end
   
-    def reading_time(wpm) 
-      @wordcount.to_i / wpm.to_i
+    def reading_time(wpm)
+      @word_count = self.count_words
+      return (@word_count / wpm.to_f).ceil
     end
   
-    def reading_chunk(wpm, minutes) 
+    def reading_chunk(wpm, minutes)
         chunks = []
-        number_of_chunks = @wordcount / wpm * minutes
+        number_of_chunks = @word_count / wpm * minutes
         n = 0
         
         number_of_chunks.times do
