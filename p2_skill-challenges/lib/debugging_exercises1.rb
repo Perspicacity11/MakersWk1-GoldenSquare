@@ -5,8 +5,6 @@ def encode(plaintext, key)
     end
     return ciphertext_chars.join
   end
-
-  #ONE CHARACTER WRONG, WHY?
   
   def decode(ciphertext, key)
     cipher = key.chars.uniq + (('a'..'z').to_a - key.chars)
@@ -20,8 +18,8 @@ def encode(plaintext, key)
   end
 
 
-puts encode("theswiftfoxjumpedoverthelazydog", "secretkey")
+# puts encode("theswiftfoxjumpedoverthelazydog", "secretkey")
 # => "EMBAXNKEKSYOVQTBJSWBDEMBPHZGJSL"
-#
-puts decode("EMBAXNKEKSYOVQTBJSWBDEMBPHZGJSL", "secretkey")
+
+# puts decode("EMBAXNKEKSYOVQTBJSWBDEMBPHZGJSL", "secretkey")
 # => "theswiftfoxjumpedoverthelazydog"
