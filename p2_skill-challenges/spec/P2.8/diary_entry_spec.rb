@@ -9,7 +9,7 @@ RSpec.describe DiaryEntry do
         entry1 = DiaryEntry.new("Monday", "Today I ate breakfast")
         entry1.count_words
     end
-
+ 
     it "adds three entries and returns the read time when provided a WPM of 3" do
         monday = DiaryEntry.new("Monday", "Today I ate some breakfast")
         tuesday = DiaryEntry.new("Tuesday", "Today I walked the dog")

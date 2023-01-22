@@ -9,7 +9,7 @@ class Diary
     def add(entry)
         @entries_list << entry
     end
-  
+   
     def all
         return @entries_list
     end

@@ -12,7 +12,7 @@ end
         @diary1.add(monday)
         expect(@diary1.all).to eq [monday]
     end
-
+ 
     it "adds three entries and returns them" do
         monday = DiaryEntry.new("Monday", "Today I ate breakfast")
         tuesday = DiaryEntry.new("Tuesday", "Today I walked the dog")
