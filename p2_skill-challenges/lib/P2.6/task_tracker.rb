@@ -1,5 +1,4 @@
 class TaskTracker
-
     def initialize
         @tasklist = []
         @tasknumber = 1
