@@ -16,6 +16,5 @@ class TaskList
       return @tasks.all? do |task|
         task.complete?
       end
-    end
   end
-   
+end
